@@ -8,8 +8,6 @@ Welcome! In this workshop, we will be learning the basics of transfer learning b
 You can follow the guide here to get set up, ignoring the bit in the middle about installing things on your own machine: 
 [Environment setup](https://github.com/cv4ecology/cv4ecology.github.io/blob/main/ai-upskilling-workshop-2025-tools.md#recommended-software-installation-for-2025-ai-upskilling-workshop).
 
-The general process looks like this
-
 2. Create a conda environment on the remote machine and install the packages you'll need.
 ```
 conda create -n hoplite python=3.10
