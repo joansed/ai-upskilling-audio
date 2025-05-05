@@ -104,6 +104,6 @@ Then, complete the `03_anuraset_train.ipynb` notebook.
 
 ## 6. Go fasterer
 
-Wanna go fast? Soup up your data loading pipeline with multithreading in `02b_threads.ipynb`.
+Wanna go fast? Soup up your data loading pipeline with multithreading in `03b_threads.ipynb`.
 
 ## The rest is yet to come!
