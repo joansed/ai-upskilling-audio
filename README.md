@@ -58,18 +58,21 @@ Feel free to interrupt the kernel and move on.
 
 Now you will prepare yourself for some agile modeling by (1) Doing some basic data exploration and analysis in Python, and (2) Training yourself to identify frog species from their vocalizations! Once you complete this "human learning" process, you will be ready to train a machine learning model to replicate your classification ability.
 
-Complete the `01_anuraset_explore.ipynb` notebook.
+Complete the `01_anuraset_explore.ipynb` notebook in this repo.
 
 ## 3. Perch-hoplite notebook 2:
 
-We told you to interrupt your database creation in step 1, because we've done it for you for the entire dataset!
+Now you will use your knowledge to quickly create a frog species classifier with agile modeling. This classifer will map from embeddings to species, using the embeddings from step 1. We told you to interrupt your database creation in step 1, because we've done it for you for the entire dataset!
 
-Copy over the full dbs with:
+Copy over the full database with:
 ```
-TODO
+cp /mnt/class_data/anuraset/*sqlite* data/
+cp /mnt/class_data/anuraset/usearch.index data/
 ```
 
-Then, 
+Then, run through the steps in `perch_hoplite/agile/1_embed_audio_v2.ipynb` to create your own classifer via agile modeling. 
+
+Agile modeling starts with a "query": a single example of the thing you are looking for. You may need to do some sleuthing on your own to find a good query clip for your species of interest (you may have already done this in the previous notebook) -- look for a single WAV file where your target species is clearly audible. In the "Search" cell, change `query_uri` to be a filepath of a WAV file containing your species of interest, and `query_label` to your species label (e.g. 'SPHSUR').
 
 ## 4. Intro to Numpy
 
