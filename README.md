@@ -4,23 +4,29 @@ Welcome! In this workshop, we will be learning the basics of transfer learning b
 
 ## 0. Environment setup
 
-1. We recommend installing VS Code locally, and then connecting to the remote machines that will be provided by CyVerse for the workshop. 
-You can follow the guide here to get set up, ignoring the bit in the middle about installing things on your own machine: 
-[Environment setup](https://github.com/cv4ecology/cv4ecology.github.io/blob/main/ai-upskilling-workshop-2025-tools.md#recommended-software-installation-for-2025-ai-upskilling-workshop).
+We will provide you with a login to a virtual machine managed by CyVerse. Once logged in, run the following commands to get an environment up and running:
 
-2. Create a conda environment on the remote machine and install the packages you'll need.
+**1. Install miniconda**, which we will use to manage Python environments:
 ```
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod +x Miniconda3-latest-Linux-x86_64.sh
+./Miniconda3-latest-Linux-x86_64.sh
+```
+Say "yes" to everything, and use all the defaults. If you accidentally say no to something, you can run it again with `./Miniconda3-latest-Linux-x86_64.sh -u` to fix it.
+
+**2. Install perch-hoplite and dependencies**
+```
+source ~/.bashrc
 conda create -n hoplite python=3.10
 conda activate hoplite
 sudo apt-get update
 sudo apt-get install libsndfile1 ffmpeg
-pip install absl-py requests 'tensorflow-cpu<2.16' tensorflow-hub
-```
-
-3. Clone the `perch-hoplite` codebase.
-```
+pip install absl-py requests 'tensorflow[and-cuda]<2.16' tensorflow-hub ipywidgets etils
+pip install git+https://github.com/google-research/perch-hoplite.git
 git clone https://github.com/google-research/perch-hoplite.git
 ```
+
+Once this is good to go, we recommend installing VS Code locally and connecting via SSH. See slides 19, 20, 33, and 34 [here](https://docs.google.com/presentation/d/1VFkmj5dvtlnziBOFM9GO4PEcfhcPrv7tfBaSo6uEOWg/edit#slide=id.g2680127c5bb_0_88) for a walkthrough.
 
 ## 1. Intro to perch-hoplite
 
