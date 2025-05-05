@@ -74,6 +74,18 @@ Then, run through the steps in `perch_hoplite/agile/1_embed_audio_v2.ipynb` to c
 
 Agile modeling starts with a "query": a single example of the thing you are looking for. You may need to do some sleuthing on your own to find a good query clip for your species of interest (you may have already done this in the previous notebook) -- look for a single WAV file where your target species is clearly audible. In the "Search" cell, change `query_uri` to be a filepath of a WAV file containing your species of interest, and `query_label` to your species label (e.g. 'SPHSUR').
 
+Run the search; you should be able to click on the label for each example to indicate whether it matches your target sound. Green for yes, orange for no, gray for unsure.
+
+Search options:
+* `exact_search` will search all embeddings and give a plot of the histogram of all similarity scores.
+* `target_sampling` allows you to search for examples with a particular score. Set the score with `target_score` to something lower int he distribution to get some negative examples.
+  (note - there is, buggily, a line which sets `target_score=None` in the `exact_search` code block. Delete this line.)
+
+After running the search and labeling some examples, you can train a classifier. You don't need many examples!
+After training the classifier, you can display some high-scoring results, and (optionally) label them in the same way as we did for the search results. After labeling more examples and saving them to the DB, we can re-train the classifier.
+
+In active learning, *margin sampling* is when we surface samples with a lower score for labeling (eg, near logit=0, corresponding to 50% model confidence). This is similar to target sampling that we did with search. After a couple rounds of labeling things with score near 0, you should see that the distribution of scores becomes more bi-modal. And you should find that the scores near 0 become much more ambiguous...
+
 ## 4. Intro to Numpy
 
 TODO
