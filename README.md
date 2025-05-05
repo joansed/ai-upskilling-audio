@@ -88,7 +88,7 @@ In active learning, *margin sampling* is when we surface samples with a lower sc
 
 ## 4. Intro to Numpy
 
-TODO
+Practice basic array operations in Numpy with `02_numpy_intro.ipynb`.
 
 ## 5. Training linear models
 
@@ -101,5 +101,9 @@ cp -r /mnt/class_data/anuraset/strong_labels/ data
 ```
 
 Then, complete the `03_anuraset_train.ipynb` notebook.
+
+## 6. Go fasterer
+
+Wanna go fast? Soup up your data loading pipeline with multithreading in `02b_threads.ipynb`.
 
 ## The rest is yet to come!
