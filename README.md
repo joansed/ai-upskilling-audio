@@ -26,26 +26,65 @@ pip install git+https://github.com/google-research/perch-hoplite.git
 git clone https://github.com/google-research/perch-hoplite.git
 ```
 
+**3. Clone this codebase!**
+```
+git clone https://github.com/CV4EcologySchool/ai-upskilling-audio.git
+```
+
 Once this is good to go, we recommend installing VS Code locally and connecting via SSH. See slides 19, 20, 33, and 34 [here](https://docs.google.com/presentation/d/1VFkmj5dvtlnziBOFM9GO4PEcfhcPrv7tfBaSo6uEOWg/edit#slide=id.g2680127c5bb_0_88) for a walkthrough.
 
-## 1. Intro to perch-hoplite
+## 1. Perch-hoplite notebook 1: Create embeddings
 
-Copy data from shared drive to your local drive:
+We will first run through an example of *agile modeling* using the `perch-hoplite` codebase.
 
-`TODO`
+First, make a copy of a subset of the AnuraSet dataset (specifically, data from site INCT17) on your local storage so that we can process it without interfering with anything on shared storage:
 
-Run through the steps in `perch_hoplite/agile/1_embed_audio_v2.ipynb`.
+```
+mkdir data
+cp -r /mnt/class_data/anuraset/audio/INCT17/ data
+cp /mnt/class_data/anuraset/metadata.csv data
+```
 
-## 2. Data exploration
+Then, run through the steps in `perch_hoplite/agile/1_embed_audio_v2.ipynb`.
+
+To complete this, you will just need to update the file and directory paths in the notebook. This assignment is complete as soon as you get the embedding creation process running -- you don't actually need to wait for it to finish. For instance, once you see something like this:
+```
+Embedding dataset: inct17
+  8%|▊         | 1704/20532 [00:40<03:07, 100.47it/s]
+```
+Feel free to interrupt the kernel and move on.
+
+## 2. Data exploration and human learning
+
+Now you will prepare yourself for some agile modeling by (1) Doing some basic data exploration and analysis in Python, and (2) Training yourself to identify frog species from their vocalizations! Once you complete this "human learning" process, you will be ready to train a machine learning model to replicate your classification ability.
 
 Complete the `01_anuraset_explore.ipynb` notebook.
 
-## 3. Intro to Numpy
+## 3. Perch-hoplite notebook 2:
+
+We told you to interrupt your database creation in step 1, because we've done it for you for the entire dataset!
+
+Copy over the full dbs with:
+```
+TODO
+```
+
+Then, 
+
+## 4. Intro to Numpy
 
 TODO
 
-## 4. Training linear models
+## 5. Training linear models
 
-Complete the `03_anuraset_train.ipynb` notebook.
+First, copy over a portion of the raw data from AnuraSet that we will process:
+
+```
+mkdir data/raw_data
+cp -r /mnt/class_data/anuraset/raw_data/ data/raw_data
+cp -r /mnt/class_data/anuraset/strong_labels/ data
+```
+
+Then, complete the `03_anuraset_train.ipynb` notebook.
 
 ## The rest is yet to come!
