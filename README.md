@@ -72,7 +72,7 @@ cp /mnt/class_data/anuraset/*sqlite* data/
 cp /mnt/class_data/anuraset/usearch.index data/
 ```
 
-Then, run through the steps in `perch_hoplite/agile/1_embed_audio_v2.ipynb` to create your own classifer via agile modeling. 
+Then, run through the steps in `perch_hoplite/agile/2_agile_modeling_v2.ipynb` to create your own classifer via agile modeling. 
 
 Agile modeling starts with a "query": a single example of the thing you are looking for. You may need to do some sleuthing on your own to find a good query clip for your species of interest (you may have already done this in the previous notebook) -- look for a single WAV file where your target species is clearly audible. In the "Search" cell, change `query_uri` to be a filepath of a WAV file containing your species of interest, and `query_label` to your species label (e.g. 'SPHSUR').
 
