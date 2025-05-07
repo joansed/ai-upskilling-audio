@@ -60,6 +60,8 @@ Now you will prepare yourself for some agile modeling by (1) Doing some basic da
 
 Complete the `01_anuraset_explore.ipynb` notebook in this repo.
 
+Note: in this notebook you will **not need to change the default path** (you won't be modifying anything, so you can just use the read-only copy on the shared drive `/mnt/class_data`).
+
 ## 3. Perch-hoplite notebook 2:
 
 Now you will use your knowledge to quickly create a frog species classifier with agile modeling. This classifer will map from embeddings to species, using the embeddings from step 1. We told you to interrupt your database creation in step 1, because we've done it for you for the entire dataset!
