@@ -6,6 +6,8 @@ Welcome! In this workshop, we will be learning the basics of transfer learning b
 
 We will provide you with a login to a virtual machine managed by CyVerse. Once logged in, run the following commands to get an environment up and running:
 
+**For easiest debugging, copy+paste one command into your terminal at a time (rather than the whole block at once).**
+
 **1. Install miniconda**, which we will use to manage Python environments:
 ```
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
