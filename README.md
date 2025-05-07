@@ -37,7 +37,7 @@ Once this is good to go, we recommend installing VS Code locally and connecting 
 
 We will first run through an example of *agile modeling* using the `perch-hoplite` codebase.
 
-First, make a copy of a subset of the AnuraSet dataset (specifically, data from site INCT17) on your local storage so that we can process it without interfering with anything on shared storage:
+We have already downloaded the AnuraSet dataset to a read-only shared storage drive at `/mnt/class_data/anuraset/`. To work with thie data, first make a copy of a subset of the AnuraSet dataset (specifically, data from site INCT17) on your VM's local storage:
 
 ```
 mkdir data
@@ -47,7 +47,7 @@ cp /mnt/class_data/anuraset/metadata.csv data
 
 Then, run through the steps in `perch_hoplite/agile/1_embed_audio_v2.ipynb`.
 
-To complete this, you will just need to update the file and directory paths in the notebook. This assignment is complete as soon as you get the embedding creation process running -- you don't actually need to wait for it to finish. For instance, once you see something like this:
+**Your task:** You will need to **update the file and directory paths** in the notebook to point to your copy of the data. Once you do this, you will be able to extract embeddings. This assignment is complete as soon as you get the embedding creation process running -- you don't actually need to wait for it to finish. For instance, once you see something like this:
 ```
 Embedding dataset: inct17
   8%|▊         | 1704/20532 [00:40<03:07, 100.47it/s]
